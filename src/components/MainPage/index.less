@@ -1,0 +1,372 @@
+
+@media screen and (max-width: 1400px) {
+    @myWidth: 120px;
+    @myHight: 100px;
+    // 正序列
+    .zxl{
+        position: relative;
+        width: max-content;
+        min-width: calc(@myWidth * 3);
+        div{
+            float: left;
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    // 到序列
+    .dxl{
+        position: relative;
+        width: max-content;
+        min-width: calc(@myWidth * 3);
+        div{
+            float: right;
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    // 右边半圆
+    .rightRadius{
+        position: absolute;
+        top: calc(@myHight / 2 - 1px);
+        right: calc(-@myHight / 2 + 5px);
+        // width: calc(@myWidth / 2px);
+        width: 0;
+        height: calc(@myHight + 1px);
+        padding: 10px 40px;
+        border-right: 1px solid #c3c7c3;
+        border-top: 1px solid #c3c7c3;
+        border-bottom: 1px solid #c3c7c3;
+        border-top-right-radius: @myWidth @myWidth;
+        border-bottom-right-radius: @myWidth @myWidth;
+    }
+
+    // 左边半圆
+    .leftRadius{
+        position: absolute;
+        top: calc(@myHight / 2 - 1px);
+        left: calc(-@myHight / 2 + 5px);
+        // width: calc(@myWidth / 2px);
+        width: 0;
+        height: calc(@myHight + 1px);
+        padding: 10px 40px;
+        border-left: 1px solid #c3c7c3;
+        border-top: 1px solid #c3c7c3;
+        border-bottom: 1px solid #c3c7c3;
+        border-top-left-radius: @myWidth @myWidth;
+        border-bottom-left-radius: @myWidth @myWidth;
+    }
+
+    .timeLineItemBottom{
+        width: @myWidth;
+        height: @myHight;
+        box-sizing: border-box;
+        position: relative;
+        div{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            border-bottom: 1px solid #c3c7c3;
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: goldenrod;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -5px;
+                left: 46%;
+            }
+        }
+    }
+    .timeLineItemTop{
+        width: @myWidth;
+        height: @myHight;
+        box-sizing: border-box;
+        position: relative;
+        div {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            border-top: 1px solid #c3c7c3;
+            transform: translateY(calc(@myHight / 2 - 1px));
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: goldenrod;
+                border-radius: 50%;
+                position: absolute;
+                top: -5px;
+                left: 46%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1400px) and (max-width: 1600px) {
+    @myWidth: 140px;
+    @myHight: 110px;
+    // 正序列
+    .zxl{
+        position: relative;
+        width: max-content;
+        min-width: calc(@myWidth * 3);
+        div{
+            float: left;
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    // 到序列
+    .dxl{
+        position: relative;
+        width: max-content;
+        min-width: calc(@myWidth * 3);
+        div{
+            float: right;
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    // 右边半圆
+    .rightRadius{
+        position: absolute;
+        top: calc(@myHight / 2 - 1px);
+        right: calc(-@myHight / 2 + 5px);
+        // width: calc(@myWidth / 2px);
+        width: 0;
+        height: calc(@myHight + 1px);
+        padding: 10px 40px;
+        border-right: 1px solid #c3c7c3;
+        border-top: 1px solid #c3c7c3;
+        border-bottom: 1px solid #c3c7c3;
+        border-top-right-radius: @myWidth @myWidth;
+        border-bottom-right-radius: @myWidth @myWidth;
+    }
+
+    // 左边半圆
+    .leftRadius{
+        position: absolute;
+        top: calc(@myHight / 2 - 1px);
+        left: calc(-@myHight / 2 + 5px);
+        // width: calc(@myWidth / 2px);
+        width: 0;
+        height: calc(@myHight + 1px);
+        padding: 10px 40px;
+        border-left: 1px solid #c3c7c3;
+        border-top: 1px solid #c3c7c3;
+        border-bottom: 1px solid #c3c7c3;
+        border-top-left-radius: @myWidth @myWidth;
+        border-bottom-left-radius: @myWidth @myWidth;
+    }
+
+    .timeLineItemBottom{
+        width: @myWidth;
+        height: @myHight;
+        box-sizing: border-box;
+        position: relative;
+        div{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            border-bottom: 1px solid #c3c7c3;
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: goldenrod;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -5px;
+                left: 46%;
+            }
+        }
+    }
+    .timeLineItemTop{
+        width: @myWidth;
+        height: @myHight;
+        box-sizing: border-box;
+        position: relative;
+        div {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            border-top: 1px solid #c3c7c3;
+            transform: translateY(calc(@myHight / 2 - 1px));
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: goldenrod;
+                border-radius: 50%;
+                position: absolute;
+                top: -5px;
+                left: 46%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1600px) and (max-width: 2000px) {
+    @myWidth: 160px;
+    @myHight: 120px;
+    // 正序列
+    .zxl{
+        position: relative;
+        width: max-content;
+        min-width: calc(@myWidth * 3);
+        div{
+            float: left;
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    // 到序列
+    .dxl{
+        position: relative;
+        width: max-content;
+        min-width: calc(@myWidth * 3);
+        div{
+            float: right;
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    // 右边半圆
+    .rightRadius{
+        position: absolute;
+        top: calc(@myHight / 2 - 1px);
+        right: calc(-@myHight / 2 + 5px);
+        // width: calc(@myWidth / 2px);
+        width: 0;
+        height: calc(@myHight + 1px);
+        padding: 10px 40px;
+        border-right: 1px solid #c3c7c3;
+        border-top: 1px solid #c3c7c3;
+        border-bottom: 1px solid #c3c7c3;
+        border-top-right-radius: @myWidth @myWidth;
+        border-bottom-right-radius: @myWidth @myWidth;
+    }
+
+    // 左边半圆
+    .leftRadius{
+        position: absolute;
+        top: calc(@myHight / 2 - 1px);
+        left: calc(-@myHight / 2 + 5px);
+        // width: calc(@myWidth / 2px);
+        width: 0;
+        height: calc(@myHight + 1px);
+        padding: 10px 40px;
+        border-left: 1px solid #c3c7c3;
+        border-top: 1px solid #c3c7c3;
+        border-bottom: 1px solid #c3c7c3;
+        border-top-left-radius: @myWidth @myWidth;
+        border-bottom-left-radius: @myWidth @myWidth;
+    }
+
+    .timeLineItemBottom{
+        width: @myWidth;
+        height: @myHight;
+        box-sizing: border-box;
+        position: relative;
+        div{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            border-bottom: 1px solid #c3c7c3;
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: goldenrod;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -5px;
+                left: 46%;
+            }
+        }
+    }
+    .timeLineItemTop{
+        width: @myWidth;
+        height: @myHight;
+        box-sizing: border-box;
+        position: relative;
+        div {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            border-top: 1px solid #c3c7c3;
+            transform: translateY(calc(@myHight / 2 - 1px));
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: goldenrod;
+                border-radius: 50%;
+                position: absolute;
+                top: -5px;
+                left: 46%;
+            }
+        }
+    }
+}
+
+.bagRed{
+    &::after{
+        background-color: #F34141 !important;
+    }
+}

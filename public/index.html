@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dva Demo</title>
+  <!-- <link rel="stylesheet" href="index.css" /> -->
+  <link rel="stylesheet/less" type="text/css" href="static/color.less" />
+  <script>
+    window.less
+    .modifyVars(
+        {
+            '@primary-color': '#ee5e7b',
+            '@link-color': '#ee5e7b',
+            '@btn-primary-bg': 'ee5e7b',
+        }
+    )
+    .then(() => { })
+    .catch(error => {
+        message.error(`Failed to update theme`);
+    });
+</script>
+</head>
+<body>
+
+  <div id="root"></div>
+  <script src="index.js"></script>
+
+</body>
+</html>
