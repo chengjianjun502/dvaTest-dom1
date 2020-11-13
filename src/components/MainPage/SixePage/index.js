@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Icon, Row, Col } from 'antd';
+import { Alert, Icon, Row, Col, Upload, Button, message } from 'antd';
 import datas from './datas';
 import myfunction from './myfunction';
 
@@ -7,6 +7,9 @@ import myfunction from './myfunction';
 const { records } = datas;
 const idDatas = [];
 export default class sixePage extends Component {
+    state={
+        fileList: [],
+    }
 
     getIddatas =(datas) =>{
         datas.forEach(item => {
@@ -49,6 +52,39 @@ export default class sixePage extends Component {
             />
         )
     }
+
+    handleChange = (info) => {
+        console.info(info, 999)
+        const { file: { type = '' } } = info;
+        if(type === 'application/x-zip-compressed'){
+            console.info('中断！');
+            return false;
+        }
+        console.info('type:', type)
+    }
+    hendleBeforeUpload = (file) => {
+        console.info(file, 999)
+        const { type = '' } = file;
+        if(type === 'application/x-zip-compressed'){
+            console.info('中断！');
+            message.warn('不支持上传zip格式文件！')
+            return false;
+        }
+        console.info('type:', type)
+        this.setState({
+            fileList: [...this.state.fileList, file]
+        })
+    }
+
+    onRemove = (file) => {
+        console.info(file, 8888);
+        const { uid = '' } = file;
+        const newArr = this.state.fileList.filter(i => i.uid !== uid);
+        console.info('newArr:', newArr)
+        this.setState({
+            fileList: newArr,
+        })
+    }
     render() {
 
         const parentData = this.handleDatas(records);
@@ -67,7 +103,19 @@ export default class sixePage extends Component {
         
         console.info('normalData:', normalData)
 
-        
+        const upLoadProps = {
+            showUploadList: true,
+            // accept: '.zip, .rar, .7z',
+            // fileList: tempFileList,
+            action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+            headers: {
+                authorization: 'authorization-text',
+            },
+            fileList: this.state.fileList,
+            // onChange: this.handleChange,
+            beforeUpload: this.hendleBeforeUpload,
+            onRemove: this.onRemove,
+          };
         
         return (
             <div>
@@ -76,11 +124,6 @@ export default class sixePage extends Component {
                         const { id, name, child } = item;
                         return(
                             <div key={id} style={{ width: '100%' }}>
-                                {/* <Alert
-                                    type="info"
-                                    message={<span style={{ color: '#03A9F4' }}><Icon type="pushpin" /> {name}</span>}
-                                    style={{ marginBottom: '.866rem' }}
-                                /> */}
                                 {this.rendernode(item)}
                                 {
                                     child.map(ele => {
@@ -101,6 +144,23 @@ export default class sixePage extends Component {
                         <div style={{ height: '200px', width: '100%', background: '#ccc' }}>456</div>
                     </Col>
                 </Row> */}
+
+
+                <br />
+                <hr />
+                <div style={{ width: '600px' }}>
+                    <h3>针对排除ZIP格式的文件上传</h3>
+                    <Upload {...upLoadProps}>
+                        <Button>
+                            <Icon type="upload" /> 点击上传附件
+                        </Button>
+                    </Upload>
+                </div>
+                
+                <br />
+
+                <br />
+
             </div>
         )
     }
