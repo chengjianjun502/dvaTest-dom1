@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 // import { Card} from 'antd';
 import style from './index.less';
-import { Tabs } from 'antd';
+import { Card, Tabs } from 'antd';
 import FirstPage from './firstPage/index';
 import ThirdPage from './mainpage/thirdPage';
 import FourthPage from './mainpage/fourthPage';
@@ -26,6 +26,22 @@ function IndexPage() {
         <TabPane tab='page4' key='4'> <Fivepages /></TabPane>
         <TabPane tab='page5' key='5'> <SixePage /></TabPane>
         <TabPane tab='page6' key='6'> <Sevenpage /></TabPane>
+        <TabPane tab='page7' key='7'> 
+          <Card
+            bodyStyle={{
+              height: '400px',
+              width: '100%',
+              background: '#333',
+              color: 'gold',
+              fontSize: '5rem',
+              fontWeight: 'bold',
+              textAlign: 'center',
+              lineHeight: '400px',
+            }}
+          >
+            THIS IS SEVEN CARD!
+          </Card>
+        </TabPane>
       </Tabs>
     </div>
   );
