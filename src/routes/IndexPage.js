@@ -9,6 +9,8 @@ import FourthPage from './mainpage/fourthPage';
 import Fivepages from './mainpage/fivepages';
 import SixePage from './mainpage/sixePage';
 import Sevenpage from './mainpage/sevenpage';
+import SuperTable from './mainpage/superTable';
+
 
 const { TabPane } = Tabs;
 function IndexPage() {
@@ -23,25 +25,10 @@ function IndexPage() {
         <TabPane tab='page1' key='1'> <FirstPage /></TabPane>
         <TabPane tab='page2' key='2'> <ThirdPage /></TabPane>
         <TabPane tab='page3' key='3'> <FourthPage /></TabPane>
-        <TabPane tab='page4' key='4'> <Fivepages /></TabPane>
+        <TabPane tab='select&tree' key='4'> <Fivepages /></TabPane>
         <TabPane tab='page5' key='5'> <SixePage /></TabPane>
-        <TabPane tab='page6' key='6'> <Sevenpage /></TabPane>
-        <TabPane tab='page7' key='7'> 
-          <Card
-            bodyStyle={{
-              height: '400px',
-              width: '100%',
-              background: '#333',
-              color: 'gold',
-              fontSize: '5rem',
-              fontWeight: 'bold',
-              textAlign: 'center',
-              lineHeight: '400px',
-            }}
-          >
-            THIS IS SEVEN CARD!
-          </Card>
-        </TabPane>
+        <TabPane tab='css进度' key='6'> <Sevenpage /></TabPane>
+        <TabPane tab='超级数据之table' key='7'><SuperTable /> </TabPane>
       </Tabs>
     </div>
   );

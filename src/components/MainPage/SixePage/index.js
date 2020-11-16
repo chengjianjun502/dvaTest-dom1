@@ -64,16 +64,20 @@ export default class sixePage extends Component {
     }
     hendleBeforeUpload = (file) => {
         console.info(file, 999)
-        const { type = '' } = file;
+        const { type = '', size = 0 } = file;
         if(type === 'application/x-zip-compressed'){
             console.info('中断！');
             message.warn('不支持上传zip格式文件！')
             return false;
+        }else if(size > 20000){
+            message.warn('不能大于20000kb');
+            return false;
         }
-        console.info('type:', type)
         this.setState({
-            fileList: [...this.state.fileList, file]
+            fileList: [file]
         })
+    
+        return true;
     }
 
     onRemove = (file) => {
@@ -97,11 +101,7 @@ export default class sixePage extends Component {
             }
          })
         
-        const params = myfunction(4,98);
-        console.info('params:', params);
-        
-        
-        console.info('normalData:', normalData)
+        // const params = myfunction(4,98);
 
         const upLoadProps = {
             showUploadList: true,
