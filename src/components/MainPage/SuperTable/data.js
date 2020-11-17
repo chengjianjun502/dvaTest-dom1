@@ -11,6 +11,7 @@ const renderTable = {
             dataIndex: `key${i}`,
             key: `key${i}`,
             fixed: i === 0 ? 'left' : '',
+            width: 150,
         })
     }
     
