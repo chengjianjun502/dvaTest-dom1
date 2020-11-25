@@ -69,7 +69,7 @@ export default class index extends Component {
                             dataSource={[dataSource[0]]}
                             pagination={false}
                             scroll={{x: 'max-content'}}
-                            getPopupContainer={() => document.getElementById('scrollTable')}
+                            // getPopupContainer={() => document.getElementById('scrollTable')}
                         />
                     </div>
                 </Affix>
@@ -77,7 +77,7 @@ export default class index extends Component {
                 <div style={{ zIndex: 1, transform: 'translateY(-54px)' }}>
                     <Table 
                         {...tableProps}
-                        getPopupContainer={() => document.getElementById('scrollTable')}
+                        // getPopupContainer={() => document.getElementById('scrollTable')}
                      />
                 </div>
                 {/* 手动控制的滚动条 4500 = 150 * 30 */}

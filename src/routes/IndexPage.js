@@ -10,6 +10,7 @@ import Fivepages from './mainpage/fivepages';
 import SixePage from './mainpage/sixePage';
 import Sevenpage from './mainpage/sevenpage';
 import SuperTable from './mainpage/superTable';
+import KonvaReact from './mainpage/konvaReact';
 
 
 const { TabPane } = Tabs;
@@ -29,6 +30,7 @@ function IndexPage() {
         <TabPane tab='page5' key='5'> <SixePage /></TabPane>
         <TabPane tab='css进度' key='6'> <Sevenpage /></TabPane>
         <TabPane tab='超级数据之table' key='7'><SuperTable /> </TabPane>
+        <TabPane tab='konva-react' key='8'><KonvaReact /> </TabPane>
       </Tabs>
     </div>
   );
