@@ -17,9 +17,9 @@ export default class index extends Component {
         var ctx = canvas.getContext("2d");
         
         // // 绘制背景
-        // ctx.fillStyle='#666';
-        // ctx.fillRect(0, 0 , canvasWidth,canvasHeight)
+        ctx.fillStyle='#666';
         // ctx.globalAlpha=0.8;
+        ctx.fillRect(0, 0 , canvasWidth,canvasHeight)
         // //画一个空心圆
         // ctx.beginPath();
         // ctx.arc(200,200,50,0,360,false);
@@ -28,20 +28,25 @@ export default class index extends Component {
         // ctx.stroke();//画空心圆
         // ctx.closePath();
 
-        ctx.beginPath();
-        ctx.lineJoin="round"; // 线相交的样式
-        ctx.lineCap="round"; // 线头样式
-        ctx.moveTo(x,0);
-        ctx.lineTo(canvasWidth,0);
-        ctx.lineTo(canvasWidth, canvasHeight);
-        ctx.lineTo(0, canvasHeight);
-        ctx.lineTo(0, y);
-        ctx.lineTo(x, y);
-        ctx.closePath();
-        ctx.strokeStyle="#0000ff"; // 笔触颜色
-        ctx.stroke(); // 绘制图像
-        ctx.fillStyle='#000000aa'
-        ctx.fill();
+        // ctx.beginPath();
+        // ctx.lineJoin="round"; // 线相交的样式
+        // ctx.lineCap="round"; // 线头样式
+        // ctx.moveTo(x,0);
+        // ctx.lineTo(canvasWidth,0);
+        // ctx.lineTo(canvasWidth, canvasHeight);
+        // ctx.lineTo(0, canvasHeight);
+        // ctx.lineTo(0, y);
+        // ctx.lineTo(x, y);
+        // ctx.closePath();
+        // ctx.strokeStyle="#0000ff"; // 笔触颜色
+        // ctx.stroke(); // 绘制图像
+        // ctx.fillStyle='#000000aa'
+        // ctx.fill();
+
+
+        ctx.fillStyle="555";	
+        ctx.globalCompositeOperation="destination-out";
+        ctx.fillRect(x,0,x, y);
         // 设置成背景图
         document.getElementById('mydiv').style.backgroundImage = 'url("' + ctx.canvas.toDataURL() + '")';
     }
