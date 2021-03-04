@@ -11,7 +11,8 @@ import SixePage from './mainpage/sixePage';
 import Sevenpage from './mainpage/sevenpage';
 import SuperTable from './mainpage/superTable';
 import KonvaReact from './mainpage/konvaReact';
-
+import ModalSnake from './mainpage/modalSnake';
+import AntdvTest from './mainpage/antdvTest';
 
 const { TabPane } = Tabs;
 function IndexPage() {
@@ -31,6 +32,8 @@ function IndexPage() {
         <TabPane tab='css进度' key='6'> <Sevenpage /></TabPane>
         <TabPane tab='超级数据之table' key='7'><SuperTable /> </TabPane>
         <TabPane tab='konva-react' key='8'><KonvaReact /> </TabPane>
+        <TabPane tab='modal之变' key='9'><ModalSnake /> </TabPane>
+        <TabPane tab='antdv' key='10'><AntdvTest /> </TabPane>
       </Tabs>
     </div>
   );
